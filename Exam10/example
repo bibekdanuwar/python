@@ -1,0 +1,35 @@
+# City temperatures
+cities_temperatures = [
+    ["東京", [25.3, 27.8, 26.2]],
+    ["大阪", [26.5, 25.0, 28.1]],
+    ["福岡", [27.0, 26.8, 25.5]],
+    ["札幌", [20.1, 21.5, 19.8]]
+]
+
+# List for city names and average temperatures
+cities_avg_temperature = []
+
+# Calculate average temperature
+for city in cities_temperatures:
+    city_name = city[0]
+    temperatures = city[1]
+
+    avg_temperature = (
+        temperatures[0] +
+        temperatures[1] +
+        temperatures[2]
+    ) / 3
+
+    cities_avg_temperature.append([city_name, avg_temperature])
+
+# Set first city as highest
+top_city_avg_temperature = cities_avg_temperature[0]
+
+# Find highest average temperature
+for city in cities_avg_temperature:
+    if city[1] > top_city_avg_temperature[1]:
+        top_city_avg_temperature = city
+
+# Print results
+print(cities_avg_temperature)
+print(top_city_avg_temperature)
