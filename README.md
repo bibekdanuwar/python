@@ -1,2 +1,2 @@
 # python
-Practice files for my programming course.
+Practicing python files for my programming course.
